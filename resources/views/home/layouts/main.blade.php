@@ -9,8 +9,10 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="{{ asset('vesperr/assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('vesperr/assets/img/GoodDeed.png') }}" rel="icon">
     <link href="{{ asset('vesperr/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -29,6 +31,7 @@
     <!-- Main CSS File -->
     <link href="{{ asset('vesperr/assets/css/main.css') }}" rel="stylesheet">
 
+
     <!-- =======================================================
   * Template Name: Vesperr
   * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
@@ -39,7 +42,7 @@
 </head>
 
 <body class="index-page">
-    @include('home.partials.header')
+    @include('home.partials.navbar')
     <main class="main">
         @yield('content')
     </main>

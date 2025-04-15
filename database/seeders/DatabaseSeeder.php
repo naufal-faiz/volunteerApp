@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\User;
+use App\Models\Volunteer;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -48,6 +49,28 @@ class DatabaseSeeder extends Seeder
             'name' => 'Apa kek lah',
             'slug' => 'apa-kek-lah',
             'description' => 'afgg gggsdgdgg ggggggggggg ggggershre dhheedhdh dfnaehejykglje'
+        ]);
+
+        Volunteer::create([
+            'title' => 'Kegiatan nyabut rumput bareng pablo escobar',
+            'slug' => 'kegiatan-nyabut-rumput-bareng-pablo-escobar',
+            'description' => 'aku nybut barengkjfalsfhkasbhfgbasfiashdiabhfikhbasikfbashdf;ha;ifgikGFwghbfghowegshv ewgv hfohfowa WOQAHFO AHFAOFAH OFAWHF OAWHFOAHFOA OA;HFhdfoahfa oahfohfqafwhgfasfh oahwfoafhasifh awof hoawsfha hofahfgweihvbfew hq983y83y4-u rea i;bidsb',
+            'location' => 'Tambun bulak gabus',
+            'time' => '08.00-12.00'
+        ]);
+        Volunteer::create([
+            'title' => 'Ngapain aja kita mah mabar yagesya',
+            'slug' => 'Ngapain-aja-kita-mah-mabar-yagesya',
+            'description' => 'aku nybut barengkjfalsfhkasbhfgbasfiashdiabhfikhbasikfbashdf;ha;ifgikGFwghbfghowegshv ewgv hfohfowa WOQAHFO AHFAOFAH OFAWHF OAWHFOAHFOA OA;HFhdfoahfa oahfohfqafwhgfasfh oahwfoafhasifh awof hoawsfha hofahfgweihvbfew hq983y83y4-u rea i;bidsb',
+            'location' => 'Tambun bulak gabus',
+            'time' => '08.00-12.00'
+        ]);
+        Volunteer::create([
+            'title' => 'Main petak umpet sama bocil',
+            'slug' => 'Main-petak-umpet-sama-bocil',
+            'description' => 'aku nybut barengkjfalsfhkasbhfgbasfiashdiabhfikhbasikfbashdf;ha;ifgikGFwghbfghowegshv ewgv hfohfowa WOQAHFO AHFAOFAH OFAWHF OAWHFOAHFOA OA;HFhdfoahfa oahfohfqafwhgfasfh oahwfoafhasifh awof hoawsfha hofahfgweihvbfew hq983y83y4-u rea i;bidsb',
+            'location' => 'Tambun bulak gabus',
+            'time' => '08.00-12.00'
         ]);
     }
 }
