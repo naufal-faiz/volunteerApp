@@ -13,7 +13,7 @@ class HomeController extends Controller
             'title' => 'GoodDeed',
             'header' => 'GoodDeed',
             'categories' => category::limit(4)->get(),
-            'volunteers' => Volunteer::all()
+            'volunteers' => Volunteer::latest()->limit(3)->get()
         ]);
     }
 }

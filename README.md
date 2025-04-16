@@ -12,3 +12,11 @@
 - benerin navbar
 - ganti icon dan hero image
 - buat footer
+
+### 16 April 2025
+- Link ke semua navbar
+- Buat factory dan update kardinalitas model
+- Update migrasi dari tabel kategori dan volunteer
+- Hapus model opportunity
+- Buat halaman detail
+- Buat card untuk list kegiatan

@@ -12,7 +12,11 @@ class Volunteer extends Model
 
     protected $fillable = ['title', 'slug', 'description', 'location', 'time' ];
 
-    public function opportunity() {
-        return $this->hasMany(Opportunity::class);
+    public function categories() {
+        return $this->belongsToMany(Category::class, 'opportunities', 'volunteer_id', 'category_id');
+    }
+
+    public function getRouteKeyName() {
+        return 'slug';
     }
 }

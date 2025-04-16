@@ -173,7 +173,7 @@
                 <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
                     @foreach ($volunteers as $volunteer)
-                            <a href="/volunteers/{{ $volunteer->slug }}" class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <a href="/opportunities/{{ $volunteer->slug }}" class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                                 <div class="portfolio-content h-100">
                                     <img src="{{ asset('vesperr/assets/img/portfolio/app-1.jpg') }}" class="img-fluid"
                                         alt="">
