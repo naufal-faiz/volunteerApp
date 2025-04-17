@@ -1,8 +1,6 @@
 @extends('home.layouts.main')
 @section('content')
     <div class="container">
-        <section id="gallery">
-            <h3 class="fw-bold">{{ $header }}</h3>
                 <div class="row">
                     @foreach ($activities as $activity)
                         <div class="col-lg-4 mb-4 text">
@@ -20,6 +18,5 @@
                         </div>
                     @endforeach
                 </div>
-        </section>
     </div>
 @endsection

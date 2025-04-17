@@ -16,7 +16,8 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('category'
 Route::get('/categories/{category}', [CategoryController::class, 'show']);
 Route::get('/about', function() {
     return view('home.activities.about', [
-        'title' => 'About'
+        'title' => 'About',
+        'header' => 'Tentang Kami'
     ]);
 });
 

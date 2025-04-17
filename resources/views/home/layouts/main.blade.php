@@ -43,7 +43,8 @@
 
 <body class="index-page">
     @include('home.partials.navbar')
-    <main class="main">
+    @include('home.partials.nav-route')
+    <main class="main mt-3">
         @yield('content')
     </main>
     @include('home.partials.footer')

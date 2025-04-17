@@ -10,10 +10,9 @@
                 <h3 class="sitename fw-bold">oodDeed</h3>
             </a>
         </div>
-        <div class="d-flex justify-content-between">
+        <div class="row">
 
-            <div class="left col">
-
+            <div class="left col-md-6">
                 <div class="d-block">
                     <p><a href="/" style="color: #33A1E1" class="fw-medium">GoodDeed</a> adalah website mengenai
                         volunteer yang dikembangkan oleh mahasiswa UBSI jurusan Sistem Informasi yang beranggotakan 5
@@ -32,22 +31,20 @@
                 </div>
             </div>
 
-            <div class="col text-center">
+            <div class="col-md-3 ml-5">
                 <p><a href="#">About Us</a></p>
                 <p><a href="#">opportunity</a></p>
                 <p><a href="#">Privacy Policy</a></p>
                 <p><a href="#">Contact Us</a></p>
             </div>
 
-            <div class="col text-end">
-                <h5 class="fw-bold">Project By</h5>
-                <ul style="list-style-type: none">
-                    <li>Naufal Faiz Hidayat</li>
-                    <li>Fazaki Ghifari</li>
-                    <li>Nazwa Ayu Ningsih</li>
-                    <li>Hendrika Yonggon</li>
-                    <li>Adinda Putri Pasaribu</li>
-                </ul>
+            <div class="col-md-3 ml-5">
+                <p class="fw-bold">Project By</p>
+                    <p>Naufal Faiz Hidayat</p>
+                    <p>Fazaki Ghifari</p>
+                    <p>Nazwa Ayu Ningsih</p>
+                    <p>Hendrika Yonggon</p>
+                    <p>Adinda Putri Pasaribu</p>
             </div>
         </div>
     </div>
