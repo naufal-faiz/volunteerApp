@@ -9,9 +9,19 @@ class CategoryController extends Controller
 {
     public function index()
     {
+        return view('home.activities.categories', [
+            'title' => 'Kategori',
+            'header' => 'Pilih kategori, tersedia ' . Category::count() . ' pilihan sesuai minat anda',
+            'activities' => Category::all()
+        ]);
+    }
+
+    public function show(Category $category)
+    {
         return view('home.activities.index', [
             'title' => 'Kategori',
-            'activities' => Category::all()
+            'header' => 'Kategori : ' . $category->title,
+            'activities' => $category->volunteers
         ]);
     }
 }

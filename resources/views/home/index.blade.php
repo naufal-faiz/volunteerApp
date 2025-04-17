@@ -9,7 +9,7 @@
                     <h1>Jadilah Relawan Bersama GoodDeed</h1>
                     <p>Tindakan kebaikan sekecil apapun lebih berharga daripada niat yang paling besar</p>
                     <div class="d-flex">
-                        <a href="#about" class="btn-get-started">Get Started</a>
+                        <a href="/opportunities" class="btn-get-started">Cari Kegiatan</a>
                         <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
                             class="glightbox btn-watch-video d-flex align-items-center"></a>
                     </div>

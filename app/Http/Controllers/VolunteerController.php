@@ -10,6 +10,7 @@ class VolunteerController extends Controller
     public function index() {
         return view('home.activities.index', [
             'title' => 'Kegiatan',
+            'header' => 'Cari kegiatan, ' . Volunteer::count() . ' kegiatan membutuhkan bantuan',
             'activities' => Volunteer::all()
         ]);
     }

@@ -6,7 +6,7 @@
                 <div class="row">
                     @foreach ($activities as $activity)
                         <div class="col-lg-4 mb-4 text">
-                            <a href="/opportunities/{{ $activity->slug }}" class="text-dark">
+                            <a href="/categories/{{ $activity->slug }}" class="text-dark">
                                 <div class="card h-100">
                                     <img src="{{ asset('vesperr/assets/img/hero-image.png') }}"
                                     alt="" class="card-img-top ">

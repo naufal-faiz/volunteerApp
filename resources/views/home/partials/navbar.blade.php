@@ -11,10 +11,9 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="/" class="{{ (Request::is('/') || (Request::is('home')) ? 'active' : '') }}">Home<br></a></li>
-                <li><a href="/opportunities" class="{{ Request::is('opportunities') ? 'active' : '' }}">Opportunity</a></li>
-                <li><a href="/categories" class="{{ Request::is('categories') ? 'active' : '' }}">Category</a></li>
-                <li><a href="/donate" class="{{ Request::is('donate') ? 'active' : '' }}">Donate</a></li>
-                <li><a href="/how-it-works" class="{{ Request::is('how-it-works') ? 'active' : '' }}">How It Works</a></li>
+                <li><a href="/opportunities" class="{{ Request::is('opportunities*') ? 'active' : '' }}">Opportunity</a></li>
+                <li><a href="/categories" class="{{ Request::is('categories*') ? 'active' : '' }}">Category</a></li>
+                <li><a href="#" class="{{ Request::is('donate*') ? 'active' : '' }}">Donate</a></li>
                 <li><a href="/about" class="{{ Request::is('about') ? 'active' : '' }}">About</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

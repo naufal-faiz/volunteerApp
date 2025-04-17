@@ -13,11 +13,7 @@ Route::controller(HomeController::class)->group(function() {
 Route::get('/opportunities', [VolunteerController::class, 'index'])->name('volunteer');
 Route::get('/opportunities/{volunteer}', [VolunteerController::class, 'show']);
 Route::get('/categories', [CategoryController::class, 'index'])->name('category');
-Route::get('/how-it-works', function() {
-    return view('home.activities.howItWorks', [
-        'title' => 'How It Works'
-    ]);
-});
+Route::get('/categories/{category}', [CategoryController::class, 'show']);
 Route::get('/about', function() {
     return view('home.activities.about', [
         'title' => 'About'

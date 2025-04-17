@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index() {
         return view('home.index', [
-            'title' => 'GoodDeed',
+            'title' => 'Home',
             'header' => 'GoodDeed',
             'categories' => category::limit(4)->get(),
             'volunteers' => Volunteer::latest()->limit(3)->get()
