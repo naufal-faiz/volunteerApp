@@ -53,8 +53,7 @@
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+    @include('home.partials.loader')
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('vesperr/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

@@ -10,6 +10,8 @@
 
 </head>
 <body>
+    @include('home.partials.loader')
+
     <div class="container">
         <div class="form-box login">
             <form action="#">
@@ -76,7 +78,6 @@
             </div>
         </div>
     </div>
-
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
