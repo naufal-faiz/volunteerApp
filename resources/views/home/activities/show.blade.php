@@ -1,5 +1,7 @@
 @extends('home.layouts.main')
 @section('content')
+@include('home.partials.nav-route')
+
     <section id="service-details" class="service-details section">
         <div class="container">
             <div class="row gy-4">

@@ -20,3 +20,11 @@
 - Hapus model opportunity
 - Buat halaman detail
 - Buat card untuk list kegiatan
+
+### 17 April 2025
+- Perbaiki tampilan list category
+- Buat list volunteer berdasarkan kategori
+- Buat view categories
+- Rapihin about us
+- rapihin footer
+- Buat header terpisah untuk navbar route

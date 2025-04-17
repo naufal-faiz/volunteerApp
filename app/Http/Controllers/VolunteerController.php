@@ -18,6 +18,7 @@ class VolunteerController extends Controller
     public function show(Volunteer $volunteer) {
         return view('home.activities.show', [
             'title' => 'Opportunity',
+            'header' => 'Detail' . $volunteer->title,
             'activity' => $volunteer
         ]);
     } 

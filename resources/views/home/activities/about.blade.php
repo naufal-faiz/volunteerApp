@@ -1,5 +1,6 @@
 @extends('home.layouts.main')
 @section('content')
+@include('home.partials.nav-route')
 <div class="container">
     <p><strong>GoodDeed</strong> adalah sebuah platform digital yang dikembangkan untuk mempertemukan relawan dengan berbagai kegiatan sosial, kemanusiaan, dan lingkungan yang membutuhkan dukungan dari masyarakat umum. Website ini bertujuan menjadi jembatan antara orang-orang yang ingin berbuat kebaikan dengan penyelenggara kegiatan yang memerlukan bantuan tangan-tangan sukarela.</p>
 

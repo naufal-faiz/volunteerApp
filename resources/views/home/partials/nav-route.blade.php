@@ -1,4 +1,4 @@
-<div class="page-title" data-aos="fade">
+<div class="page-title mb-3" data-aos="fade">
     <div class="container">
       <nav class="breadcrumbs">
         <ol>

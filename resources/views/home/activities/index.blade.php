@@ -1,5 +1,6 @@
 @extends('home.layouts.main')
 @section('content')
+@include('home.partials.nav-route')
     <div class="container">
                 <div class="row">
                     @foreach ($activities as $activity)
