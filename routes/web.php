@@ -21,4 +21,7 @@ Route::get('/about', function() {
     ]);
 });
 
-Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/dashboard', function() {
+    return view('dashboard.index');
+});

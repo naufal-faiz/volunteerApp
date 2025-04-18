@@ -4,7 +4,7 @@
         <a href="/" class="logo d-flex align-items-center me-auto">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="asset('vesperr/assets/img/logo.png') }}" alt=""> -->
-            <img src="{{ asset('vesperr/assets/img/GoodDeed.png') }}" alt="GoodDeed Logo" class="mx-0"">
+            <img src="{{ asset('vesperr/assets/img/GoodDeed.png') }}" alt="GoodDeed Logo" class="mx-0">
             <h1 class="sitename">oodDeed</h1>
         </a>
 
