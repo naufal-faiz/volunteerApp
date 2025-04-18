@@ -17,13 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Nopaleon',
-            'username' => 'nopaleon',
-            'password' => bcrypt('12345'),
-            'role' => 'administrator',
-            'email' => 'nopal@gmail.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Nopaleon',
+        //     'username' => 'nopaleon',
+        //     'password' => bcrypt('12345'),
+        //     'role' => 'administrator',
+        //     'email' => 'nopal@gmail.com',
+        // ]);
 
         $volunteers = Volunteer::factory(20)->create();
         $categories = Category::factory()

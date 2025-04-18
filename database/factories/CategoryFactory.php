@@ -19,7 +19,8 @@ class CategoryFactory extends Factory
         return [
             'title' => $this->faker->word(),
             'slug' => $this->faker->slug(),
-            'description' => $this->faker->slug()
+            'description' => $this->faker->sentence(),
+            'icon' => $this->faker->randomElement(['tree-fill', 'person-raised-hand', 'box2-heart', 'gift', 'house', 'cash'])
         ];
     }
 }

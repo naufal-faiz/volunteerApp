@@ -12,7 +12,7 @@ class CategoryController extends Controller
         return view('home.activities.categories', [
             'title' => 'Kategori',
             'header' => 'Pilih kategori, tersedia ' . Category::count() . ' pilihan sesuai minat anda',
-            'activities' => Category::all()
+            'categories' => Category::all()
         ]);
     }
 

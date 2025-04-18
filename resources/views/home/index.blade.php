@@ -142,9 +142,10 @@
             <div class="row gy-4 d-">
                 @foreach ($categories as $category)
                     <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item position-relative">
-                            <i class="bi bi-activity"></i>
-                            <h4><a href="/categories/{{ $category->slug }}" class="stretched-link">{{ $category->name }}</a>
+                        <div class="service-item position-relative w-100">
+                            <i class="bi bi-{{ $category->icon }}"></i>
+                            <h4><a href="/categories/{{ $category->slug }}"
+                                    class="stretched-link">{{ $category->title }}</a>
                             </h4>
                             <p>{{ $category->description }}</p>
                         </div>
@@ -166,43 +167,60 @@
             <p>Temukan kegiatan yang kamu sukai dan jadilah relawan!</p>
         </div><!-- End Section Title -->
 
+        <style>
+            .card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .card img {
+                transition: transform 0.4s ease;
+            }
+
+            .card:hover img {
+                transform: scale(1.05);
+            }
+        </style>
+
         <div class="container">
-
-            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-                <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                    @foreach ($volunteers as $volunteer)
-                            <a href="/opportunities/{{ $volunteer->slug }}" class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                                <div class="portfolio-content h-100">
-                                    <img src="{{ asset('vesperr/assets/img/portfolio/app-1.jpg') }}" class="img-fluid"
-                                        alt="">
-                                    <div class="portfolio-info">
-                                        <h4>{{ $volunteer->title }}</h4>
-                                        <p>{{ $volunteer->location }}</p>
-                                    </div>
+            <div class="row row-cols-4">
+                @foreach ($volunteers as $volunteer)
+                    <div class="col mb-4 text">
+                        <a href="/opportunities/{{ $volunteer->slug }}" class="text-dark">
+                            <div class="card h-100">
+                                <div class="overflow-hidden d-flex align-items-center justify-content-center"
+                                    style="width: 100%; height: 200px;">
+                                    <img src="{{ asset('vesperr/assets/img/hero-image.png') }}" alt=""
+                                        class="card-img-top">
                                 </div>
-                            </a><!-- End Portfolio Item -->
-                    @endforeach
-                </div><!-- End Portfolio Container -->
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $volunteer->title }}</h5>
+                                    <p class="card-text">{{ $volunteer->location }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
 
-    </section><!-- /Portfolio Section -->
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials section light-background">
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Testimonials</h2>
+                <p>Dari mereka yang berkontribusi bersama GoodDeed</p>
+            </div><!-- End Section Title -->
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Testimonials</h2>
-            <p>Dari mereka yang berkontribusi bersama GoodDeed</p>
-        </div><!-- End Section Title -->
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="swiper init-swiper">
-                <script type="application/json" class="swiper-config">
+                <div class="swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
                     {
                       "loop": true,
                       "speed": 600,
@@ -227,128 +245,136 @@
                       }
                     }
                   </script>
-                <div class="swiper-wrapper">
+                    <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-1.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-1.jpg') }}"
+                                        class="testimonial-img" alt="">
+                                    <h3>Saul Goodman</h3>
+                                    <h4>Ceo &amp; Founder</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
+                                            suscipit
+                                            rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen
+                                            aliquam,
+                                            risus at semper.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
                                 </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                        rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                        risus at semper.</span>
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
                             </div>
-                        </div>
-                    </div><!-- End testimonial item -->
+                        </div><!-- End testimonial item -->
 
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-2.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-2.jpg') }}"
+                                        class="testimonial-img" alt="">
+                                    <h3>Sara Wilsson</h3>
+                                    <h4>Designer</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
+                                            quid
+                                            cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure
+                                            amet
+                                            legam anim culpa.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
                                 </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                        cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                        legam anim culpa.</span>
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
                             </div>
-                        </div>
-                    </div><!-- End testimonial item -->
+                        </div><!-- End testimonial item -->
 
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-3.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-3.jpg') }}"
+                                        class="testimonial-img" alt="">
+                                    <h3>Jena Karlis</h3>
+                                    <h4>Store Owner</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla
+                                            quem
+                                            veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis
+                                            sint
+                                            minim.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
                                 </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                        veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                        minim.</span>
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
                             </div>
-                        </div>
-                    </div><!-- End testimonial item -->
+                        </div><!-- End testimonial item -->
 
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-4.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-4.jpg') }}"
+                                        class="testimonial-img" alt="">
+                                    <h3>Matt Brandon</h3>
+                                    <h4>Freelancer</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                                            fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore
+                                            quem
+                                            dolore labore illum veniam.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
                                 </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                        fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                        dolore labore illum veniam.</span>
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
                             </div>
-                        </div>
-                    </div><!-- End testimonial item -->
+                        </div><!-- End testimonial item -->
 
-                    <div class="swiper-slide">
-                        <div class="testimonial-wrap">
-                            <div class="testimonial-item">
-                                <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-5.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="{{ asset('vesperr/assets/img/testimonials/testimonials-5.jpg') }}"
+                                        class="testimonial-img" alt="">
+                                    <h3>John Larson</h3>
+                                    <h4>Entrepreneur</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor
+                                            noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam
+                                            esse
+                                            veniam culpa fore nisi cillum quid.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
                                 </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor
-                                        noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse
-                                        veniam culpa fore nisi cillum quid.</span>
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
                             </div>
-                        </div>
-                    </div><!-- End testimonial item -->
+                        </div><!-- End testimonial item -->
 
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
+
             </div>
 
-        </div>
-
-    </section><!-- /Testimonials Section -->
-@endsection
+        </section><!-- /Testimonials Section -->
+    @endsection

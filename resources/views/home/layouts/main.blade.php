@@ -11,7 +11,7 @@
     <!-- Favicons -->
     <link href="{{ asset('vesperr/assets/img/GoodDeed.png') }}" rel="icon">
     <link href="{{ asset('vesperr/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 
     <!-- Fonts -->
@@ -31,14 +31,33 @@
     <!-- Main CSS File -->
     <link href="{{ asset('vesperr/assets/css/main.css') }}" rel="stylesheet">
 
+    {{-- Main CSS File ColorLib --}}
+    <link rel="stylesheet" href="{{ asset('colorlib/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('colorlib/css/style.css') }}">
+    <style>
+        .no-spinner::-webkit-outer-spin-button,
+        .no-spinner::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
 
-    <!-- =======================================================
-  * Template Name: Vesperr
-  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+        .no-spinner {
+            -moz-appearance: textfield;
+        }
+
+        .btn-register {
+            width: 100%;
+            height: 48px;
+            background: #33A1E1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body class="index-page">
@@ -67,6 +86,8 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('vesperr/assets/js/main.js') }}"></script>
+    <script src="{{ asset('colorlib/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('colorlib/js/main.js') }}"></script>
 
 </body>
 

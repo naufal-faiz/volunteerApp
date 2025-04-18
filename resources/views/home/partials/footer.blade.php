@@ -19,8 +19,8 @@
                         orang
                     </p>
                     <p>Jika tidak ada perjuangan, maka tidak ada kekuatan.</p>
-                    <p><a href="#">UBSI Kaliabang</a></p>
-                    <p><a href="#">0888 kapan kapan gua ke dufan</a></p>
+                    <p><a href="#" class="fw-medium">UBSI Kaliabang</a></p>
+                    <p><a href="#" class="fw-medium">0888 kapan kapan gua ke dufan</a></p>
                 </div>
 
                 <div class="social-links d-flex">
@@ -32,19 +32,19 @@
             </div>
 
             <div class="col-md-3 ml-5">
-                <p><a href="#">About Us</a></p>
-                <p><a href="#">opportunity</a></p>
-                <p><a href="#">Privacy Policy</a></p>
-                <p><a href="#">Contact Us</a></p>
+                <p><a href="#" class="fw-medium">About Us</a></p>
+                <p><a href="#" class="fw-medium">opportunity</a></p>
+                <p><a href="#" class="fw-medium">Privacy Policy</a></p>
+                <p><a href="#" class="fw-medium">Contact Us</a></p>
             </div>
 
             <div class="col-md-3 ml-5">
                 <p class="fw-bold">Project By</p>
-                    <p>Naufal Faiz Hidayat</p>
-                    <p>Fazaki Ghifari</p>
-                    <p>Nazwa Ayu Ningsih</p>
-                    <p>Hendrika Yonggon</p>
-                    <p>Adinda Putri Pasaribu</p>
+                    <p class="fw-medium">Naufal Faiz Hidayat</p>
+                    <p class="fw-medium">Fazaki Ghifari</p>
+                    <p class="fw-medium">Nazwa Ayu Ningsih</p>
+                    <p class="fw-medium">Hendrika Yonggon</p>
+                    <p class="fw-medium">Adinda Putri Pasaribu</p>
             </div>
         </div>
     </div>
