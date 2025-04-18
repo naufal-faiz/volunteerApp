@@ -31,9 +31,10 @@
     <!-- Main CSS File -->
     <link href="{{ asset('vesperr/assets/css/main.css') }}" rel="stylesheet">
 
-    {{-- Main CSS File ColorLib --}}
+    <!-- Main CSS File ColorLib -->
     <link rel="stylesheet" href="{{ asset('colorlib/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('colorlib/css/style.css') }}">
+
     <style>
         .no-spinner::-webkit-outer-spin-button,
         .no-spinner::-webkit-inner-spin-button {
@@ -88,7 +89,6 @@
     <script src="{{ asset('vesperr/assets/js/main.js') }}"></script>
     <script src="{{ asset('colorlib/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('colorlib/js/main.js') }}"></script>
-
 </body>
 
 </html>

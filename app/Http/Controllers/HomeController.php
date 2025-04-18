@@ -16,4 +16,11 @@ class HomeController extends Controller
             'volunteers' => Volunteer::latest()->limit(4)->get()
         ]);
     }
+
+    public function about() {
+        return view('home.about', [
+            'title' => 'About',
+            'header' => 'Tentang Kami'
+        ]);
+    }
 }

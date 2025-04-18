@@ -9,34 +9,45 @@
                 <div class="col-md-6 contents">
                     <div class="row justify-content-center">
                         <div class="col-md-8">
+                            @if (session()->has('success'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {{ session('success') }}
+                                    <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            @endif
+                            @if (session()->has('loginError'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    {{ session('loginError') }}
+                                    <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            @endif
                             <div class="mb-4">
                                 <h1>Masuk</h1>
-                                <p class="mb-4">Masuk sebagai user agar kamu bisa menggunakan hak mu sebagai seorang relawan!</p>
+                                <p class="mb-4">Masuk sebagai user agar kamu bisa menggunakan hak mu sebagai seorang
+                                    relawan!</p>
                             </div>
-                            <form action="{{ route('register') }}" method="post" autocomplete="off">
+                            <form action="{{ route('login') }}" method="post" autocomplete="off">
                                 @csrf
                                 <div class="form-group first">
-                                    <label for="username">Username</label>
-                                    <input type="text"
-                                        class="form-control @error('username') is-invalid
+                                    <input placeholder="Username/Email/No Telepon" type="text"
+                                        class="form-control @error('login') is-invalid
                                     @enderror"
-                                        id="username" value="{{ old('username') }}" name="username">
-                                    @error('username')
-                                        <small class="invalid-feedback">
+                                        id="login" value="{{ old('login') }}" name="login">
+                                    @error('login')
+                                        <div class="invalid-feedback">
                                             {{ $message }}
-                                        </small>
+                                        </div>
                                     @enderror
                                 </div>
                                 <div class="form-group last mb-4">
-                                    <label for="password">Password</label>
-                                    <input type="password"
+                                    <input placeholder="Password" type="password"
                                         class="form-control @error('password') is-invalid
                                     @enderror"
                                         id="password" name="password">
                                     @error('password')
-                                        <small class="invalid-feedback">
+                                        <div class="invalid-feedback">
                                             {{ $message }}
-                                        </small>
+                                        </div>
                                     @enderror
                                 </div>
 
