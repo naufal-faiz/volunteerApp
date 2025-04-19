@@ -89,6 +89,7 @@
     <script src="{{ asset('vesperr/assets/js/main.js') }}"></script>
     <script src="{{ asset('colorlib/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('colorlib/js/main.js') }}"></script>
+    <script src="{{ asset('js/profile/owl.carousel.min.js') }}"></script>
 </body>
 
 </html>

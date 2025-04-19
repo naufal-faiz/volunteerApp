@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Volunteer;
 use Illuminate\Http\Request;
+use App\Models\Volunteer;
 
 class VolunteerController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index() {
         return view('home.activities.index', [
             'title' => 'Kegiatan',
@@ -15,11 +18,51 @@ class VolunteerController extends Controller
         ]);
     }
 
-    public function show(Volunteer $volunteer) {
-        return view('home.activities.show', [
-            'title' => 'Opportunity',
-            'header' => 'Detail' . $volunteer->title,
-            'activity' => $volunteer
-        ]);
-    } 
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
 }

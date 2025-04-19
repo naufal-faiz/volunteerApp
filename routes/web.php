@@ -13,7 +13,7 @@ Route::controller(HomeController::class)->group(function() {
 });
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/opportunities', [VolunteerController::class, 'index'])->name('volunteer');
-Route::get('/opportunities/{volunteer}', [VolunteerController::class, 'show']);
+Route::get('/opportunities/{volunteer}', [HomeController::class, 'volunteer']);
 Route::get('/categories', [CategoryController::class, 'index'])->name('category');
 Route::get('/categories/{category}', [CategoryController::class, 'show']);
 

@@ -17,8 +17,16 @@ class HomeController extends Controller
         ]);
     }
 
+    public function volunteer(Volunteer $volunteer) {
+        return view('home.activities.show', [
+            'title' => 'Opportunity',
+            'header' => 'Detail' . $volunteer->title,
+            'activity' => $volunteer
+        ]);
+    }
+
     public function about() {
-        return view('home.about', [
+        return view('home.activities.about', [
             'title' => 'About',
             'header' => 'Tentang Kami'
         ]);
